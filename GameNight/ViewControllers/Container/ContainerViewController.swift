@@ -2,7 +2,7 @@
 //  ContainerViewController.swift
 //  GameNight
 //
-//  Created by Felipe Naranjo on 9/14/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
@@ -34,13 +34,15 @@ class ContainerViewController: UIViewController {
     case 1:
       showStats()
     default:
-      print("Nothing")
+      break
     }
   }
   
   func createSegmentedControl() {
     segmentedControl = UISegmentedControl(items: segments.map { return $0 })
-    segmentedControl.frame.size = CGSize(width: 270, height: 27)
+    if let navBarSize = navigationController?.navigationBar.frame.size {
+        segmentedControl.frame.size = CGSize(width: Sizes.screenWidth, height: navBarSize.height)
+    }    
     segmentedControl.tintColor = Colors.blueTint
     segmentedControl.selectedSegmentIndex = 0
     segmentedControl.addTarget(self, action: #selector(ContainerViewController.onControl(_:)), for: .valueChanged)

@@ -2,7 +2,7 @@
 //  GamesViewController.swift
 //  Fanduel-Challenge
 //
-//  Created by Felipe Naranjo on 9/13/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
@@ -15,11 +15,12 @@ class GamesViewController: UIViewController {
   let viewModel = GamesViewModel(service: GameNightService())
   
   override func viewDidLoad() {
-      super.viewDidLoad()
-      tableView.dataSource = self
-      viewModel.getGames()
+    super.viewDidLoad()
+    tableView.dataSource = self
+    tableView.delegate = self
+    viewModel.delegate = self
+    viewModel.getGames()
   }
-  
 
 }
 
@@ -33,10 +34,20 @@ extension GamesViewController: UITableViewDataSource {
       return UITableViewCell()
     }
     let game = viewModel.games[indexPath.row]
-    game.setup()
     cell.configure(with: game)
     return cell
   }
 }
 
+extension GamesViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return Sizes.gameCellHeight
+  }
+}
+
+extension GamesViewController: GamesViewModelDelegate {
+  func didFinishLoadingData() {
+    tableView.reloadData()
+  }
+}
 

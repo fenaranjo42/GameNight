@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		556810D32150191B0019531E /* GamesModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556810D22150191B0019531E /* GamesModelController.swift */; };
+		559591BB2150263A00C141D5 /* StatsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559591BA2150263A00C141D5 /* StatsModelController.swift */; };
+		559591BD2150279F00C141D5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559591BC2150279F00C141D5 /* Player.swift */; };
+		55B575CD214C01B40044A1D9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575CC214C01B40044A1D9 /* UIColor+Extension.swift */; };
+		55B575D0214C35CA0044A1D9 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575CF214C35CA0044A1D9 /* ContainerViewController.swift */; };
+		55B575D2214C36860044A1D9 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575D1214C36860044A1D9 /* UIViewController+Extension.swift */; };
+		55B575D4214C3D520044A1D9 /* GameStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575D3214C3D520044A1D9 /* GameStateViewController.swift */; };
+		55B575D6214C3DEB0044A1D9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575D5214C3DEB0044A1D9 /* LoadingViewController.swift */; };
+		55B575EC214ED6FB0044A1D9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575EB214ED6FB0044A1D9 /* Colors.swift */; };
+		55B575EF214EDAB10044A1D9 /* basketballData.json in Resources */ = {isa = PBXBuildFile; fileRef = 55B575EE214EDAB10044A1D9 /* basketballData.json */; };
+		55B575F1214EDD030044A1D9 /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575F0214EDD030044A1D9 /* PlayersService.swift */; };
+		55B575F3214EDD900044A1D9 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575F2214EDD900044A1D9 /* PlayerData.swift */; };
+		55B575F5214EDEF80044A1D9 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575F4214EDEF80044A1D9 /* StatsViewModel.swift */; };
+		55B575F8214F02CD0044A1D9 /* StatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575F7214F02CD0044A1D9 /* StatsCell.swift */; };
+		55B575FA214F657B0044A1D9 /* BasketballData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575F9214F657B0044A1D9 /* BasketballData.swift */; };
+		55B575FC214F6A7A0044A1D9 /* PlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B575FB214F6A7A0044A1D9 /* PlayerStats.swift */; };
+		55D7B4652150345A0055090D /* StringProtocol+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B4642150345A0055090D /* StringProtocol+Extension.swift */; };
+		55D7B467215036770055090D /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B466215036770055090D /* Sizes.swift */; };
+		55D7B46921504A9A0055090D /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B46821504A9A0055090D /* Double+Extension.swift */; };
+		55FC0913214B3F51008387B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0912214B3F51008387B5 /* AppDelegate.swift */; };
+		55FC0918214B3F51008387B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC0916214B3F51008387B5 /* Main.storyboard */; };
+		55FC091A214B3F52008387B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FC0919214B3F52008387B5 /* Assets.xcassets */; };
+		55FC091D214B3F52008387B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC091B214B3F52008387B5 /* LaunchScreen.storyboard */; };
+		55FC0928214B3F52008387B5 /* GameNightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0927214B3F52008387B5 /* GameNightTests.swift */; };
+		55FC0938214B408B008387B5 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0937214B408B008387B5 /* StatsViewController.swift */; };
+		55FC093A214B4093008387B5 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0939214B4093008387B5 /* GamesViewController.swift */; };
+		55FC093D214B40A3008387B5 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC093C214B40A3008387B5 /* GameCell.swift */; };
+		55FC0940214B4B04008387B5 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC093F214B4B04008387B5 /* GameData.swift */; };
+		55FC0942214B5574008387B5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0941214B5574008387B5 /* Team.swift */; };
+		55FC0944214B5590008387B5 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0943214B5590008387B5 /* GameState.swift */; };
+		55FC0947214B566B008387B5 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0946214B566B008387B5 /* TeamView.swift */; };
+		55FC0949214B57C4008387B5 /* GamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0948214B57C4008387B5 /* GamesViewModel.swift */; };
+		55FC094B214B646B008387B5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC094A214B646B008387B5 /* Game.swift */; };
+		55FC0961214B671D008387B5 /* GameNightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0960214B671D008387B5 /* GameNightService.swift */; };
+		55FC0963214B6E96008387B5 /* GameStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0962214B6E96008387B5 /* GameStateView.swift */; };
+		8CC2D2694397CB637EDAE4EF /* Pods_GameNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0192D7AC613D79BF6CCF355B /* Pods_GameNight.framework */; };
+		BFD5FE34C29E9240642D04E6 /* Pods_GameNightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CDDDA3B8E5FD6E1CD10E29 /* Pods_GameNightTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55FC0924214B3F52008387B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FC0907214B3F51008387B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FC090E214B3F51008387B5;
+			remoteInfo = GameNight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0192D7AC613D79BF6CCF355B /* Pods_GameNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D1E0EDA71D37F6BCED3E43E /* Pods-GameNight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameNight/Pods-GameNight.release.xcconfig"; sourceTree = "<group>"; };
+		43CDDDA3B8E5FD6E1CD10E29 /* Pods_GameNightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		556810D22150191B0019531E /* GamesModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModelController.swift; sourceTree = "<group>"; };
+		559591BA2150263A00C141D5 /* StatsModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModelController.swift; sourceTree = "<group>"; };
+		559591BC2150279F00C141D5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		55B575CC214C01B40044A1D9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		55B575CF214C35CA0044A1D9 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		55B575D1214C36860044A1D9 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		55B575D3214C3D520044A1D9 /* GameStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateViewController.swift; sourceTree = "<group>"; };
+		55B575D5214C3DEB0044A1D9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		55B575EB214ED6FB0044A1D9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		55B575EE214EDAB10044A1D9 /* basketballData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = basketballData.json; sourceTree = "<group>"; };
+		55B575F0214EDD030044A1D9 /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
+		55B575F2214EDD900044A1D9 /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
+		55B575F4214EDEF80044A1D9 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		55B575F7214F02CD0044A1D9 /* StatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCell.swift; sourceTree = "<group>"; };
+		55B575F9214F657B0044A1D9 /* BasketballData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballData.swift; sourceTree = "<group>"; };
+		55B575FB214F6A7A0044A1D9 /* PlayerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStats.swift; sourceTree = "<group>"; };
+		55D7B4642150345A0055090D /* StringProtocol+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Extension.swift"; sourceTree = "<group>"; };
+		55D7B466215036770055090D /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		55D7B46821504A9A0055090D /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		55FC090F214B3F51008387B5 /* GameNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FC0912214B3F51008387B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55FC0917214B3F51008387B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55FC0919214B3F52008387B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55FC091C214B3F52008387B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55FC091E214B3F52008387B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FC0923214B3F52008387B5 /* GameNightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameNightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FC0927214B3F52008387B5 /* GameNightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightTests.swift; sourceTree = "<group>"; };
+		55FC0929214B3F52008387B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FC0937214B408B008387B5 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		55FC0939214B4093008387B5 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		55FC093C214B40A3008387B5 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		55FC093F214B4B04008387B5 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		55FC0941214B5574008387B5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		55FC0943214B5590008387B5 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		55FC0946214B566B008387B5 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		55FC0948214B57C4008387B5 /* GamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewModel.swift; sourceTree = "<group>"; };
+		55FC094A214B646B008387B5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		55FC0960214B671D008387B5 /* GameNightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNightService.swift; sourceTree = "<group>"; };
+		55FC0962214B6E96008387B5 /* GameStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateView.swift; sourceTree = "<group>"; };
+		741EE2849F6D150D00A74E22 /* Pods-GameNightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameNightTests/Pods-GameNightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8181E12BF1CA254FA4DF0FE /* Pods-GameNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameNight/Pods-GameNight.debug.xcconfig"; sourceTree = "<group>"; };
+		EB6C124C37630DCC751723DC /* Pods-GameNightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameNightTests/Pods-GameNightTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55FC090C214B3F51008387B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CC2D2694397CB637EDAE4EF /* Pods_GameNight.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC0920214B3F52008387B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD5FE34C29E9240642D04E6 /* Pods_GameNightTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55B575CB214C01A00044A1D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55B575CC214C01B40044A1D9 /* UIColor+Extension.swift */,
+				55B575D1214C36860044A1D9 /* UIViewController+Extension.swift */,
+				55D7B4642150345A0055090D /* StringProtocol+Extension.swift */,
+				55D7B46821504A9A0055090D /* Double+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55B575CE214C35AA0044A1D9 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				55B575CF214C35CA0044A1D9 /* ContainerViewController.swift */,
+				55B575D3214C3D520044A1D9 /* GameStateViewController.swift */,
+				55B575D5214C3DEB0044A1D9 /* LoadingViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		55B575EA214ED6E10044A1D9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				55B575CB214C01A00044A1D9 /* Extensions */,
+				55B575EB214ED6FB0044A1D9 /* Colors.swift */,
+				55D7B466215036770055090D /* Sizes.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		55B575ED214EDA5A0044A1D9 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				55B575EE214EDAB10044A1D9 /* basketballData.json */,
+				55B575F9214F657B0044A1D9 /* BasketballData.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		55B575F6214F02B70044A1D9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				55B575F7214F02CD0044A1D9 /* StatsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		55FC0906214B3F51008387B5 = {
+			isa = PBXGroup;
+			children = (
+				55FC0911214B3F51008387B5 /* GameNight */,
+				55FC0926214B3F52008387B5 /* GameNightTests */,
+				55FC0910214B3F51008387B5 /* Products */,
+				D415F9D365F24E7C34A0D1A3 /* Pods */,
+				D9EC9870D266DD3342D5CB9A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55FC0910214B3F51008387B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55FC090F214B3F51008387B5 /* GameNight.app */,
+				55FC0923214B3F52008387B5 /* GameNightTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55FC0911214B3F51008387B5 /* GameNight */ = {
+			isa = PBXGroup;
+			children = (
+				55B575ED214EDA5A0044A1D9 /* MockData */,
+				55B575EA214ED6E10044A1D9 /* Utilities */,
+				55FC095F214B66D5008387B5 /* DataFetching */,
+				55FC093E214B4AEA008387B5 /* Model */,
+				55FC0934214B4070008387B5 /* ViewControllers */,
+				55FC0912214B3F51008387B5 /* AppDelegate.swift */,
+				55FC0916214B3F51008387B5 /* Main.storyboard */,
+				55FC0919214B3F52008387B5 /* Assets.xcassets */,
+				55FC091B214B3F52008387B5 /* LaunchScreen.storyboard */,
+				55FC091E214B3F52008387B5 /* Info.plist */,
+			);
+			path = GameNight;
+			sourceTree = "<group>";
+		};
+		55FC0926214B3F52008387B5 /* GameNightTests */ = {
+			isa = PBXGroup;
+			children = (
+				55FC0927214B3F52008387B5 /* GameNightTests.swift */,
+				55FC0929214B3F52008387B5 /* Info.plist */,
+			);
+			path = GameNightTests;
+			sourceTree = "<group>";
+		};
+		55FC0934214B4070008387B5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				55B575CE214C35AA0044A1D9 /* Container */,
+				55FC0936214B4082008387B5 /* Games */,
+				55FC0935214B407D008387B5 /* Stats */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		55FC0935214B407D008387B5 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				55B575F6214F02B70044A1D9 /* Cells */,
+				55FC0937214B408B008387B5 /* StatsViewController.swift */,
+				55B575F4214EDEF80044A1D9 /* StatsViewModel.swift */,
+				559591BA2150263A00C141D5 /* StatsModelController.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		55FC0936214B4082008387B5 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				55FC0945214B564A008387B5 /* Views */,
+				55FC093B214B409A008387B5 /* Cells */,
+				55FC0939214B4093008387B5 /* GamesViewController.swift */,
+				55FC0948214B57C4008387B5 /* GamesViewModel.swift */,
+				556810D22150191B0019531E /* GamesModelController.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		55FC093B214B409A008387B5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				55FC093C214B40A3008387B5 /* GameCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		55FC093E214B4AEA008387B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55FC093F214B4B04008387B5 /* GameData.swift */,
+				55FC0941214B5574008387B5 /* Team.swift */,
+				55FC0943214B5590008387B5 /* GameState.swift */,
+				55B575F2214EDD900044A1D9 /* PlayerData.swift */,
+				55B575FB214F6A7A0044A1D9 /* PlayerStats.swift */,
+				55FC094A214B646B008387B5 /* Game.swift */,
+				559591BC2150279F00C141D5 /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55FC0945214B564A008387B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55FC0946214B566B008387B5 /* TeamView.swift */,
+				55FC0962214B6E96008387B5 /* GameStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55FC095F214B66D5008387B5 /* DataFetching */ = {
+			isa = PBXGroup;
+			children = (
+				55FC0960214B671D008387B5 /* GameNightService.swift */,
+				55B575F0214EDD030044A1D9 /* PlayersService.swift */,
+			);
+			path = DataFetching;
+			sourceTree = "<group>";
+		};
+		D415F9D365F24E7C34A0D1A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8181E12BF1CA254FA4DF0FE /* Pods-GameNight.debug.xcconfig */,
+				3D1E0EDA71D37F6BCED3E43E /* Pods-GameNight.release.xcconfig */,
+				741EE2849F6D150D00A74E22 /* Pods-GameNightTests.debug.xcconfig */,
+				EB6C124C37630DCC751723DC /* Pods-GameNightTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9EC9870D266DD3342D5CB9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0192D7AC613D79BF6CCF355B /* Pods_GameNight.framework */,
+				43CDDDA3B8E5FD6E1CD10E29 /* Pods_GameNightTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55FC090E214B3F51008387B5 /* GameNight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FC092C214B3F52008387B5 /* Build configuration list for PBXNativeTarget "GameNight" */;
+			buildPhases = (
+				B4574702277A31539DE29143 /* [CP] Check Pods Manifest.lock */,
+				55FC090B214B3F51008387B5 /* Sources */,
+				55FC090C214B3F51008387B5 /* Frameworks */,
+				55FC090D214B3F51008387B5 /* Resources */,
+				437863B82B46C0FA21267251 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameNight;
+			productName = GameNight;
+			productReference = 55FC090F214B3F51008387B5 /* GameNight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55FC0922214B3F52008387B5 /* GameNightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FC092F214B3F52008387B5 /* Build configuration list for PBXNativeTarget "GameNightTests" */;
+			buildPhases = (
+				0EECE83629A8C0FF3071CAC0 /* [CP] Check Pods Manifest.lock */,
+				55FC091F214B3F52008387B5 /* Sources */,
+				55FC0920214B3F52008387B5 /* Frameworks */,
+				55FC0921214B3F52008387B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FC0925214B3F52008387B5 /* PBXTargetDependency */,
+			);
+			name = GameNightTests;
+			productName = GameNightTests;
+			productReference = 55FC0923214B3F52008387B5 /* GameNightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55FC0907214B3F51008387B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Felipe Naranjo";
+				TargetAttributes = {
+					55FC090E214B3F51008387B5 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					55FC0922214B3F52008387B5 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 55FC090E214B3F51008387B5;
+					};
+				};
+			};
+			buildConfigurationList = 55FC090A214B3F51008387B5 /* Build configuration list for PBXProject "GameNight" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55FC0906214B3F51008387B5;
+			productRefGroup = 55FC0910214B3F51008387B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55FC090E214B3F51008387B5 /* GameNight */,
+				55FC0922214B3F52008387B5 /* GameNightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55FC090D214B3F51008387B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FC091D214B3F52008387B5 /* LaunchScreen.storyboard in Resources */,
+				55FC091A214B3F52008387B5 /* Assets.xcassets in Resources */,
+				55B575EF214EDAB10044A1D9 /* basketballData.json in Resources */,
+				55FC0918214B3F51008387B5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC0921214B3F52008387B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EECE83629A8C0FF3071CAC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameNightTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		437863B82B46C0FA21267251 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GameNight/Pods-GameNight-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameNight/Pods-GameNight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4574702277A31539DE29143 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameNight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55FC090B214B3F51008387B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B575FC214F6A7A0044A1D9 /* PlayerStats.swift in Sources */,
+				55FC0944214B5590008387B5 /* GameState.swift in Sources */,
+				55B575EC214ED6FB0044A1D9 /* Colors.swift in Sources */,
+				55FC0961214B671D008387B5 /* GameNightService.swift in Sources */,
+				559591BD2150279F00C141D5 /* Player.swift in Sources */,
+				55B575D6214C3DEB0044A1D9 /* LoadingViewController.swift in Sources */,
+				55D7B467215036770055090D /* Sizes.swift in Sources */,
+				55B575D4214C3D520044A1D9 /* GameStateViewController.swift in Sources */,
+				55D7B46921504A9A0055090D /* Double+Extension.swift in Sources */,
+				55B575D0214C35CA0044A1D9 /* ContainerViewController.swift in Sources */,
+				55B575D2214C36860044A1D9 /* UIViewController+Extension.swift in Sources */,
+				55B575F5214EDEF80044A1D9 /* StatsViewModel.swift in Sources */,
+				55FC094B214B646B008387B5 /* Game.swift in Sources */,
+				559591BB2150263A00C141D5 /* StatsModelController.swift in Sources */,
+				55B575F3214EDD900044A1D9 /* PlayerData.swift in Sources */,
+				55FC0942214B5574008387B5 /* Team.swift in Sources */,
+				55FC0949214B57C4008387B5 /* GamesViewModel.swift in Sources */,
+				55FC093D214B40A3008387B5 /* GameCell.swift in Sources */,
+				55FC0947214B566B008387B5 /* TeamView.swift in Sources */,
+				55B575FA214F657B0044A1D9 /* BasketballData.swift in Sources */,
+				55D7B4652150345A0055090D /* StringProtocol+Extension.swift in Sources */,
+				55B575F1214EDD030044A1D9 /* PlayersService.swift in Sources */,
+				55B575F8214F02CD0044A1D9 /* StatsCell.swift in Sources */,
+				55FC0940214B4B04008387B5 /* GameData.swift in Sources */,
+				55FC0963214B6E96008387B5 /* GameStateView.swift in Sources */,
+				55FC093A214B4093008387B5 /* GamesViewController.swift in Sources */,
+				55B575CD214C01B40044A1D9 /* UIColor+Extension.swift in Sources */,
+				556810D32150191B0019531E /* GamesModelController.swift in Sources */,
+				55FC0938214B408B008387B5 /* StatsViewController.swift in Sources */,
+				55FC0913214B3F51008387B5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC091F214B3F52008387B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FC0928214B3F52008387B5 /* GameNightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55FC0925214B3F52008387B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FC090E214B3F51008387B5 /* GameNight */;
+			targetProxy = 55FC0924214B3F52008387B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55FC0916214B3F51008387B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55FC0917214B3F51008387B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55FC091B214B3F52008387B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55FC091C214B3F52008387B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55FC092A214B3F52008387B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55FC092B214B3F52008387B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55FC092D214B3F52008387B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8181E12BF1CA254FA4DF0FE /* Pods-GameNight.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5FQP62JU5;
+				INFOPLIST_FILE = GameNight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naranjo.GameNight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55FC092E214B3F52008387B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1E0EDA71D37F6BCED3E43E /* Pods-GameNight.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5FQP62JU5;
+				INFOPLIST_FILE = GameNight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naranjo.GameNight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55FC0930214B3F52008387B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 741EE2849F6D150D00A74E22 /* Pods-GameNightTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5FQP62JU5;
+				INFOPLIST_FILE = GameNightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naranjo.GameNightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameNight.app/GameNight";
+			};
+			name = Debug;
+		};
+		55FC0931214B3F52008387B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB6C124C37630DCC751723DC /* Pods-GameNightTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J5FQP62JU5;
+				INFOPLIST_FILE = GameNightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Naranjo.GameNightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameNight.app/GameNight";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55FC090A214B3F51008387B5 /* Build configuration list for PBXProject "GameNight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FC092A214B3F52008387B5 /* Debug */,
+				55FC092B214B3F52008387B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FC092C214B3F52008387B5 /* Build configuration list for PBXNativeTarget "GameNight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FC092D214B3F52008387B5 /* Debug */,
+				55FC092E214B3F52008387B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FC092F214B3F52008387B5 /* Build configuration list for PBXNativeTarget "GameNightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FC0930214B3F52008387B5 /* Debug */,
+				55FC0931214B3F52008387B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55FC0907214B3F51008387B5 /* Project object */;
+}

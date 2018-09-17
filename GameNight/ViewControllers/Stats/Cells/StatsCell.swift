@@ -2,7 +2,7 @@
 //  StatsCell.swift
 //  GameNight
 //
-//  Created by Felipe Naranjo on 9/16/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
@@ -14,20 +14,24 @@ class StatsCell: UITableViewCell {
   @IBOutlet var statsLabel: UILabel!
   @IBOutlet var nerdLabel: UILabel!
   
-  func configure(for data: PlayerData) {
-    
+  func configure(for player: Player) {
+    nameCityLabel.text = "\(player.player.name) - \(player.team.abbreviation)"
+    statsLabel.attributedText = NSAttributedString.attributedText(for: player.stats)
+    nerdLabel.text = "\(player.stats.nerd.cleanString())"
   }
 }
 
-struct PlayerData {
-  var player: Player
-  var team: Team
-  var stats: Stats
-}
-
-struct Stats {
-  var points: Int
-  var rebounds: Int
-  var assists: Int
-  var nerd: Int
+private extension NSAttributedString {
+  static func attributedText(for stats: PlayerStats) -> NSAttributedString? {
+    let boldSubString = "\(stats.points)Pts"
+    let string = "\(boldSubString), \(stats.assists)Ast, \(stats.rebounds)Reb"
+    let attribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17, weight: .bold)]
+    
+    guard let range = string.range(of: boldSubString) else { return nil }
+    
+    let nsRange = string.nsRange(from: range)
+    let attributedString = NSMutableAttributedString(string: string)
+    attributedString.addAttributes(attribute, range: nsRange)
+    return attributedString
+  }
 }

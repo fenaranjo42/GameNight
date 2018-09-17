@@ -2,7 +2,7 @@
 //  GameStateView.swift
 //  GameNight
 //
-//  Created by Felipe Naranjo on 9/14/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
@@ -12,9 +12,11 @@ import UIKit
 
 class GameStateView: UIView {
   
+  @IBOutlet var stackView: UIStackView!
   @IBOutlet var quarterLabel: UILabel!
   @IBOutlet var timeLabel: UILabel!
   @IBOutlet var broadcasterLabel: UILabel!
+  @IBOutlet var statusLabel: UILabel!
   @IBOutlet var awayIndicator: UIImageView!
   @IBOutlet var homeIndicator: UIImageView!
   
@@ -27,6 +29,7 @@ class GameStateView: UIView {
     setIndicators(for: state.scoreState)
     awayIndicator.tintColor = color
     homeIndicator.tintColor = color
+    setViews(for: state)
   }
   
   private func setIndicators(for scoreState: ScoreState) {
@@ -41,6 +44,30 @@ class GameStateView: UIView {
     default:
       awayIndicator.isHidden = true
       homeIndicator.isHidden = true
+    }
+  }
+  
+  private func setViews(for state: GameState) {
+    switch state.status {
+    case .final:
+      quarterLabel.isHidden = true
+      timeLabel.isHidden = true
+      broadcasterLabel.isHidden = true
+      statusLabel.isHidden = false
+      stackView.distribution = .equalCentering
+    case .scheduled:
+      quarterLabel.isHidden = true
+      timeLabel.isHidden = false
+      timeLabel.text = state.startTime
+      broadcasterLabel.isHidden = false
+      statusLabel.isHidden = true
+      stackView.distribution = .fillEqually
+    case .inProgress:
+      quarterLabel.isHidden = false
+      timeLabel.isHidden = false
+      broadcasterLabel.isHidden = false
+      statusLabel.isHidden = true
+      stackView.distribution = .equalCentering
     }
   }
 }

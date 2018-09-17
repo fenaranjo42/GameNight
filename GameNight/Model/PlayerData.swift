@@ -1,5 +1,5 @@
 //
-//  Game.swift
+//  Player.swift
 //  GameNight
 //
 //  Created by Felipe Naranjo on 9/17/18.
@@ -8,17 +8,15 @@
 
 import Foundation
 
-struct GameData: Codable  {
+struct PlayerData: Codable {
   let id: Int
-  let homeTeamId: Int
-  let awayTeamId: Int
-  let date: String
+  let name: String
+  let teamId: Int
   
   enum CodingKeys: String, CodingKey {
     case id
-    case homeTeamId = "home_team_id"
-    case awayTeamId = "away_team_id"
-    case date
+    case name
+    case teamId = "team_id"
   }
+  
 }
-

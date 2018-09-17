@@ -2,7 +2,7 @@
 //  GameCell.swift
 //  Fanduel-Challenge
 //
-//  Created by Felipe Naranjo on 9/13/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
@@ -15,38 +15,38 @@ class GameCell: UITableViewCell {
   @IBOutlet var stateView: GameStateView!
   
   var stateViewColor = UIColor.lightGray
-  var state: ScoreState = ScoreState.tied {
-    didSet {
-      configureForState(state: state)
-    }
-  }
-  
+  var state: ScoreState = ScoreState.tied
   
   func configure(with game: Game) {
-    awayTeamView.setup(with: game.awayTeam?.name,
+    let gameStarted = hasStarted(state: game.gameState)
+    awayTeamView.setup(with: game.awayTeam,
                        score: String(describing: game.gameState?.awayTeamScore ?? 0),
-                       record: "")
+                       hasStarted: gameStarted)
     
-    homeTeamView.setup(with: game.homeTeam?.name,
+    homeTeamView.setup(with: game.homeTeam,
                        score: String(describing: game.gameState?.homeTeamScore ?? 0),
-                       record: "")
+                       hasStarted: gameStarted)
     
     if let state = game.gameState?.scoreState {
       switch state {
       case .awayWinning:
-        stateViewColor = UIColor.with(hex: game.awayTeam?.colorHex ?? "000000")
+        stateViewColor = UIColor.with(hex: game.awayTeam?.colorHex ?? "D6D6D6")
       case .homeWinning:
-        stateViewColor = UIColor.with(hex: game.homeTeam?.colorHex ?? "000000")
+        stateViewColor = UIColor.with(hex: game.homeTeam?.colorHex ?? "D6D6D6")
       case .tied:
         stateViewColor = .lightGray
       }
     }    
+    guard let state = game.gameState else { return }
     
-    stateView.setup(with: game.gameState!, color: stateViewColor)
+    stateView.setup(with: state, color: stateViewColor)
   }
   
-  func configureForState(state: ScoreState) {
-    
+  private func hasStarted(state: GameState?) -> Bool {
+    guard let status = state?.status else { return false }
+    switch status {
+    case .scheduled: return false
+    default: return true
+    }
   }
-  
 }

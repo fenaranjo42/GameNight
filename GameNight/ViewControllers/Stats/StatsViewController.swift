@@ -2,7 +2,7 @@
 //  StatsViewController.swift
 //  Fanduel-Challenge
 //
-//  Created by Felipe Naranjo on 9/13/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
@@ -12,12 +12,13 @@ class StatsViewController: UIViewController {
   
   @IBOutlet var tableView: UITableView!
   
-  let viewModel = StatsViewModel(service: PlayersService())
+  let viewModel = StatsViewModel(playerService: PlayersService(), gamesService: GameNightService())
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.dataSource = self
-        viewModel.getPlayers()
+      super.viewDidLoad()
+      tableView.dataSource = self
+      viewModel.delegate = self
+      viewModel.getPlayers()
     }
 
 }
@@ -32,7 +33,13 @@ extension StatsViewController: UITableViewDataSource {
       return UITableViewCell()
     }
     let player = viewModel.players[indexPath.row]
-    cell.textLabel?.text = player.name
+    cell.configure(for: player)
     return cell
+  }
+}
+
+extension StatsViewController: StatsViewModelDelegate {
+  func didFinishLoadingData() {
+    tableView.reloadData()
   }
 }

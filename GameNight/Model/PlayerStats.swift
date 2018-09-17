@@ -16,7 +16,7 @@ struct PlayerStats: Codable {
   let points: Int
   let assists: Int
   let rebounds: Int
-  let nerd: Int
+  let nerd: Double
   
   enum CodingKeys: String, CodingKey {
     case id

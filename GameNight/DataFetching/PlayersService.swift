@@ -2,14 +2,14 @@
 //  PlayersService.swift
 //  GameNight
 //
-//  Created by Felipe Naranjo on 9/16/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
 import Foundation
 
 protocol PlayersDataParsing: class {
-  func players(completion: @escaping ([Player]) -> Void)
+  func players(completion: @escaping ([PlayerData]) -> Void)
   func stats(completion: @escaping ([PlayerStats]) -> Void)
 }
 
@@ -17,13 +17,13 @@ class PlayersService: PlayersDataParsing {
   
   let data = BasketballData().basketballJSON()
   
-  func players(completion: @escaping ([Player]) -> Void) {
+  func players(completion: @escaping ([PlayerData]) -> Void) {
     do {
-        if let players = data["players"] as? [[String: Any]] {
-          let json = try JSONSerialization.data(withJSONObject: players)
-          let decodedPlayers = try JSONDecoder().decode([Player].self, from: json)
-          completion(decodedPlayers)
-        }
+      if let players = data["players"] as? [[String: Any]] {
+        let json = try JSONSerialization.data(withJSONObject: players)
+        let decodedPlayers = try JSONDecoder().decode([PlayerData].self, from: json)
+        completion(decodedPlayers)
+      }
     } catch let error {
       print(error)
     }
@@ -39,8 +39,6 @@ class PlayersService: PlayersDataParsing {
     } catch let error {
       print(error)
     }
-    completion(nil)
   }
-  
   
 }

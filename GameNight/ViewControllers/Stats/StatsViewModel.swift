@@ -2,31 +2,36 @@
 //  StatsViewModel.swift
 //  GameNight
 //
-//  Created by Felipe Naranjo on 9/16/18.
+//  Created by Felipe Naranjo on 9/17/18.
 //  Copyright © 2018 Felipe Naranjo. All rights reserved.
 //
 
 import Foundation
+import PromiseKit
+
+protocol StatsViewModelDelegate: class {
+  func didFinishLoadingData()
+}
 
 class StatsViewModel {
   
   var players: [Player] = []
-  var stats: [PlayerStats] = []
-  var service: PlayersDataParsing?
+  var modelController: StatsModelController?
+  weak var delegate: StatsViewModelDelegate?
   
-  init(service: PlayersDataParsing) {
-    self.service = service
+  var playerService: PlayersDataParsing?
+  var gamesService: GameParsing?
+  
+  init(playerService: PlayersDataParsing, gamesService: GameParsing) {
+    self.playerService = playerService
+    self.gamesService = gamesService
+    modelController = StatsModelController(playersParser: playerService, gamesParser: gamesService)
   }
   
   func getPlayers() {
-    service?.players { players in
+    modelController?.loadData { players in
       self.players = players
-    }
-  }
-  
-  func getStats() {
-    service?.stats { stats in
-      self.stats = stats
+      self.delegate?.didFinishLoadingData()
     }
   }
 }
