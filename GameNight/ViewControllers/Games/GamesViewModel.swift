@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PromiseKit
 
 protocol GamesViewModelDelegate: class {
   func didFinishLoadingData()
@@ -17,7 +16,7 @@ class GamesViewModel {
   
   var games: [Game] = []
   var service: GameParsing
-  var modelController: GamesModelController?
+  var modelController: GamesLoading?
   weak var delegate: GamesViewModelDelegate?
   
   init(service: GameParsing) {

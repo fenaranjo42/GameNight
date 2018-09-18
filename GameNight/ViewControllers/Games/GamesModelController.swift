@@ -8,7 +8,11 @@
 
 import Foundation
 
-class GamesModelController {
+protocol GamesLoading: class {
+  func loadData(completion: @escaping ([Game]) -> Void)
+}
+
+class GamesModelController: GamesLoading {
   
   var games: [Game]?
   

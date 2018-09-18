@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PromiseKit
 
 protocol StatsViewModelDelegate: class {
   func didFinishLoadingData()
@@ -16,7 +15,7 @@ protocol StatsViewModelDelegate: class {
 class StatsViewModel {
   
   var players: [Player] = []
-  var modelController: StatsModelController?
+  var modelController: StatsLoading?
   weak var delegate: StatsViewModelDelegate?
   
   var playerService: PlayersDataParsing?

@@ -8,7 +8,11 @@
 
 import Foundation
 
-class StatsModelController {
+protocol StatsLoading: class {
+  func loadData(completion: @escaping ([Player]) -> Void)
+}
+
+class StatsModelController: StatsLoading {
   var players: [Player]?
   
   private var playersParser: PlayersDataParsing

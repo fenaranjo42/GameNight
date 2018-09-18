@@ -38,7 +38,7 @@ class ContainerViewController: UIViewController {
     }
   }
   
-  func createSegmentedControl() {
+  private func createSegmentedControl() {
     segmentedControl = UISegmentedControl(items: segments.map { return $0 })
     if let navBarSize = navigationController?.navigationBar.frame.size {
         segmentedControl.frame.size = CGSize(width: Sizes.screenWidth, height: navBarSize.height)
