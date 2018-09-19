@@ -30,6 +30,7 @@
 		55D7B46E215055BB0055090D /* GamesModelControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B46D215055BB0055090D /* GamesModelControllerTests.swift */; };
 		55D7B471215064130055090D /* StatsModelControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B470215064130055090D /* StatsModelControllerTests.swift */; };
 		55D7B473215067FB0055090D /* StatsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B472215067FB0055090D /* StatsViewModelTests.swift */; };
+		55D7B47621519B900055090D /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7B47521519B900055090D /* TableViewDataSource.swift */; };
 		55FC0913214B3F51008387B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC0912214B3F51008387B5 /* AppDelegate.swift */; };
 		55FC0918214B3F51008387B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC0916214B3F51008387B5 /* Main.storyboard */; };
 		55FC091A214B3F52008387B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FC0919214B3F52008387B5 /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		55D7B46D215055BB0055090D /* GamesModelControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModelControllerTests.swift; sourceTree = "<group>"; };
 		55D7B470215064130055090D /* StatsModelControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModelControllerTests.swift; sourceTree = "<group>"; };
 		55D7B472215067FB0055090D /* StatsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModelTests.swift; sourceTree = "<group>"; };
+		55D7B47521519B900055090D /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		55FC090F214B3F51008387B5 /* GameNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FC0912214B3F51008387B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55FC0917214B3F51008387B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,6 +198,14 @@
 			path = Stats;
 			sourceTree = "<group>";
 		};
+		55D7B47421519B840055090D /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				55D7B47521519B900055090D /* TableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		55FC0906214B3F51008387B5 = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +256,7 @@
 		55FC0934214B4070008387B5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				55D7B47421519B840055090D /* DataSource */,
 				55B575CE214C35AA0044A1D9 /* Container */,
 				55FC0936214B4082008387B5 /* Games */,
 				55FC0935214B407D008387B5 /* Stats */,
@@ -488,6 +499,7 @@
 				55B575D6214C3DEB0044A1D9 /* LoadingViewController.swift in Sources */,
 				55D7B467215036770055090D /* Sizes.swift in Sources */,
 				55B575D4214C3D520044A1D9 /* GameStateViewController.swift in Sources */,
+				55D7B47621519B900055090D /* TableViewDataSource.swift in Sources */,
 				55D7B46921504A9A0055090D /* Double+Extension.swift in Sources */,
 				55B575D0214C35CA0044A1D9 /* ContainerViewController.swift in Sources */,
 				55B575D2214C36860044A1D9 /* UIViewController+Extension.swift in Sources */,

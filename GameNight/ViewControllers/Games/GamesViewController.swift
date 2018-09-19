@@ -16,27 +16,11 @@ class GamesViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.dataSource = self
     tableView.delegate = self
     viewModel.delegate = self
     viewModel.getGames()
   }
 
-}
-
-extension GamesViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel.games.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath) as? GameCell else {
-      return UITableViewCell()
-    }
-    let game = viewModel.games[indexPath.row]
-    cell.configure(with: game)
-    return cell
-  }
 }
 
 extension GamesViewController: UITableViewDelegate {
@@ -47,6 +31,7 @@ extension GamesViewController: UITableViewDelegate {
 
 extension GamesViewController: GamesViewModelDelegate {
   func didFinishLoadingData() {
+    tableView.dataSource = viewModel.dataSource
     tableView.reloadData()
   }
 }

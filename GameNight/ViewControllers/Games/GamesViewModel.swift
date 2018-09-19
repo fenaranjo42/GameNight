@@ -17,6 +17,7 @@ class GamesViewModel {
   var games: [Game] = []
   var service: GameParsing
   var modelController: GamesLoading?
+  var dataSource: TableViewDataSource<Game>?
   weak var delegate: GamesViewModelDelegate?
   
   init(service: GameParsing) {
@@ -27,6 +28,7 @@ class GamesViewModel {
   func getGames() {
     modelController?.loadData { games in
       self.games = games
+      self.dataSource = .make(for: games)
       self.delegate?.didFinishLoadingData()
     }
   }

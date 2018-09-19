@@ -16,6 +16,7 @@ class StatsViewModel {
   
   var players: [Player] = []
   var modelController: StatsLoading?
+  var dataSource: TableViewDataSource<Player>?
   weak var delegate: StatsViewModelDelegate?
   
   var playerService: PlayersDataParsing?
@@ -30,6 +31,7 @@ class StatsViewModel {
   func getPlayers() {
     modelController?.loadData { players in
       self.players = players
+      self.dataSource = .make(for: players)
       self.delegate?.didFinishLoadingData()
     }
   }
